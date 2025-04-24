@@ -7,7 +7,7 @@ namespace GlossaryManagementSystem.DTOs.GlossaryItem
 {
     public class UpdateGlossaryItemDTO
     {
-        public string? Term { get; set; }
-        public string? Definition { get; set; }
+        public string Term { get; set; } = string.Empty;
+        public string Definition { get; set; } = string.Empty;
     }
 }
