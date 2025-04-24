@@ -30,6 +30,7 @@ namespace GlossaryManagementSystem.Repositories
             => await Task.FromResult(_items.FirstOrDefault(i => i.Id == id));
         public async Task<GlossaryItem> Add(GlossaryItem item)
         {
+            item.Id = _items.Count == 0 ? 1 : _items.Max(i => i.Id) + 1;
             _items.Add(item);
             return await Task.FromResult(item);
         }
@@ -45,13 +46,13 @@ namespace GlossaryManagementSystem.Repositories
             => await Task.FromResult(_items.Any(i => i.Id == id));
         public async Task<GlossaryItem?> Update(GlossaryItem item)
         {
-            var exist = _items.FirstOrDefault(i => i.Id == item.Id);
-            if (exist is null)
+            var existing = _items.FirstOrDefault(i => i.Id == item.Id);
+            if (existing is null)
                 return null;
-            exist.Term = item.Term;
-            exist.Definition = item.Definition;
+            existing.Term = item.Term;
+            existing.Definition = item.Definition;
 
-            return await Task.FromResult(exist);
+            return await Task.FromResult(existing);
         }
 
     }
