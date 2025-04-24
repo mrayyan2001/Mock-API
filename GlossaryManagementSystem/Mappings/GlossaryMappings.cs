@@ -34,10 +34,11 @@ namespace GlossaryManagementSystem.Mappings
                 Definition = dto.Definition
             };
         }
-        public static GlossaryItem ToEntity(this UpdateGlossaryItemDTO dto)
+        public static GlossaryItem ToEntity(this UpdateGlossaryItemDTO dto, int id)
         {
             return new GlossaryItem()
             {
+                Id = id,
                 Term = dto.Term,
                 Definition = dto.Definition
             };
