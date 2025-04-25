@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IGlossaryRepository, GlossaryRepository>();
 builder.Services.AddScoped<IGlossaryService, GlossaryService>();
 
-builder.Services.AddSingleton<GlossaryDbContext>();
+builder.Services.AddScoped<GlossaryDbContext>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

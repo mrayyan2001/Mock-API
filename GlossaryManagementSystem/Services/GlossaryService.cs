@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GlossaryManagementSystem.DTOs;
 using GlossaryManagementSystem.DTOs.GlossaryItem;
 using GlossaryManagementSystem.Interfaces;
 using GlossaryManagementSystem.Mappings;
@@ -30,9 +31,13 @@ namespace GlossaryManagementSystem.Services
         public async Task<GlossaryItemDetailsDto?> Delete(int id)
             => (await _glossaryRepo.Delete(id))?.ToDetailsDto();
 
-        public async Task<List<GlossaryItemDTO>> GetAll()
+        public async Task<List<GlossaryItemDTO>> GetAll(PaginationParams pagination)
         {
-            return (await _glossaryRepo.GetAll()).Select(i => i.ToDto()).ToList();
+            return (await _glossaryRepo.GetAll())
+                .Skip((pagination.PageNumber - 1) * pagination.PageSize)
+                .Take(pagination.PageSize)
+                .Select(i => i.ToDto())
+                .ToList();
         }
         public async Task<GlossaryItemDetailsDto?> GetById(int id)
             => (await _glossaryRepo.GetById(id))?.ToDetailsDto();

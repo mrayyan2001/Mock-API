@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GlossaryManagementSystem.DTOs;
 using GlossaryManagementSystem.DTOs.GlossaryItem;
 using GlossaryManagementSystem.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -21,8 +22,8 @@ namespace GlossaryManagementSystem.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
-            => Ok(await _glossaryService.GetAll());
+        public async Task<IActionResult> GetAll([FromQuery] PaginationParams pagination)
+            => Ok(await _glossaryService.GetAll(pagination));
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
