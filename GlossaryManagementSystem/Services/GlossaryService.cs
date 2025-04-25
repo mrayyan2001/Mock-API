@@ -17,14 +17,14 @@ namespace GlossaryManagementSystem.Services
         {
             _glossaryRepo = glossaryRepo;
         }
-        public async Task<GlossaryItemDTO> Add(CreateGlossaryItemDTO item)
+        public async Task<GlossaryItemDetailsDto> Add(CreateGlossaryItemDTO item)
         {
             // TODO - Handle busies logic (Term should be unique)
             if (await _glossaryRepo.Exists(item.Term))
             {
                 throw new Exception($"Term {item.Term} is already exists.");
             }
-            return (await _glossaryRepo.Add(item.ToEntity())).ToDto();
+            return (await _glossaryRepo.Add(item.ToEntity())).ToDetailsDto();
         }
         public async Task<List<GlossaryItemDTO>> GetAll()
         {

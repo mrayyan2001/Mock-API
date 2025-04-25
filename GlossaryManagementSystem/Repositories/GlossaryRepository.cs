@@ -10,7 +10,7 @@ namespace GlossaryManagementSystem.Repositories
     public class GlossaryRepository : IGlossaryRepository
     {
 
-        private readonly List<GlossaryItem> _items = new List<GlossaryItem>()
+        private readonly static List<GlossaryItem> _items = new List<GlossaryItem>()
         {
             new GlossaryItem { Id = 1, Term = "API", Definition = "A set of functions that allows applications to access data and interact with external software components or services." },
             new GlossaryItem { Id = 2, Term = "HTTP", Definition = "HyperText Transfer Protocol, the foundation of data communication for the World Wide Web." },

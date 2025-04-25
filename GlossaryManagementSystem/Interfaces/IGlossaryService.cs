@@ -10,7 +10,7 @@ namespace GlossaryManagementSystem.Interfaces
     {
         public Task<List<GlossaryItemDTO>> GetAll();
         public Task<GlossaryItemDetailsDto?> GetById(int id);
-        public Task<GlossaryItemDTO> Add(CreateGlossaryItemDTO item);
+        public Task<GlossaryItemDetailsDto> Add(CreateGlossaryItemDTO item);
         public Task<GlossaryItemDetailsDto?> Update(int id, UpdateGlossaryItemDTO item);
     }
 }
