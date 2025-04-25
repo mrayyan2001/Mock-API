@@ -20,6 +20,10 @@ namespace GlossaryManagementSystem.Services
         public async Task<GlossaryItemDTO> Add(CreateGlossaryItemDTO item)
         {
             // TODO - Handle busies logic (Term should be unique)
+            if (await _glossaryRepo.Exists(item.Term))
+            {
+                throw new Exception($"Term {item.Term} is already exists.");
+            }
             return (await _glossaryRepo.Add(item.ToEntity())).ToDto();
         }
         public async Task<List<GlossaryItemDTO>> GetAll()

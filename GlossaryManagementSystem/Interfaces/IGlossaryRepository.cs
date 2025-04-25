@@ -13,6 +13,6 @@ namespace GlossaryManagementSystem.Interfaces
         public Task<GlossaryItem> Add(GlossaryItem item);
         public Task<GlossaryItem?> Update(GlossaryItem item);
         public Task<GlossaryItem?> Delete(int id);
-        public Task<bool> Exists(int id);
+        public Task<bool> Exists(string term);
     }
 }

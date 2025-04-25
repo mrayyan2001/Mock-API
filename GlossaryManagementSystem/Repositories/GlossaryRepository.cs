@@ -42,8 +42,8 @@ namespace GlossaryManagementSystem.Repositories
             _items.Remove(exist);
             return await Task.FromResult(exist);
         }
-        public async Task<bool> Exists(int id)
-            => await Task.FromResult(_items.Any(i => i.Id == id));
+        public async Task<bool> Exists(string term)
+            => await Task.FromResult(_items.Any(i => i.Term == term));
         public async Task<GlossaryItem?> Update(GlossaryItem item)
         {
             var existing = _items.FirstOrDefault(i => i.Id == item.Id);
