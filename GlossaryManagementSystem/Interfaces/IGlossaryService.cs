@@ -12,5 +12,6 @@ namespace GlossaryManagementSystem.Interfaces
         public Task<GlossaryItemDetailsDto?> GetById(int id);
         public Task<GlossaryItemDetailsDto> Add(CreateGlossaryItemDTO item);
         public Task<GlossaryItemDetailsDto?> Update(int id, UpdateGlossaryItemDTO item);
+        public Task<GlossaryItemDetailsDto?> Delete(int id);
     }
 }

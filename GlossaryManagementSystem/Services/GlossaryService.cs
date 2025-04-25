@@ -26,6 +26,10 @@ namespace GlossaryManagementSystem.Services
             }
             return (await _glossaryRepo.Add(item.ToEntity())).ToDetailsDto();
         }
+
+        public async Task<GlossaryItemDetailsDto?> Delete(int id)
+            => (await _glossaryRepo.Delete(id))?.ToDetailsDto();
+
         public async Task<List<GlossaryItemDTO>> GetAll()
         {
             return (await _glossaryRepo.GetAll()).Select(i => i.ToDto()).ToList();
