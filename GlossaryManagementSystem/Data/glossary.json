@@ -1,0 +1,102 @@
+[
+  {
+    "Id": 2,
+    "Term": "HTTP",
+    "Definition": "HyperText Transfer Protocol, the foundation of data communication for the World Wide Web."
+  },
+  {
+    "Id": 3,
+    "Term": "JSON",
+    "Definition": "JavaScript Object Notation, a lightweight data-interchange format that\u0027s easy for humans to read and write."
+  },
+  {
+    "Id": 4,
+    "Term": "REST",
+    "Definition": "Representational State Transfer, an architectural style for designing networked applications."
+  },
+  {
+    "Id": 5,
+    "Term": "DTO",
+    "Definition": "Data Transfer Object, a design pattern used to transfer data between software application subsystems."
+  },
+  {
+    "Id": 6,
+    "Term": "Entity Framework",
+    "Definition": "An open-source object-relational mapping framework for ADO.NET, part of the .NET framework."
+  },
+  {
+    "Id": 7,
+    "Term": "Middleware",
+    "Definition": "Software that acts as a bridge between an operating system or database and applications, especially on a network."
+  },
+  {
+    "Id": 8,
+    "Term": "Routing",
+    "Definition": "The process of directing an HTTP request to the appropriate controller and action method in a web application."
+  },
+  {
+    "Id": 9,
+    "Term": "CORS",
+    "Definition": "Cross-Origin Resource Sharing, a mechanism that allows resources on a web page to be requested from another domain."
+  },
+  {
+    "Id": 10,
+    "Term": "Dependency Injection",
+    "Definition": "A design pattern that allows a class to receive its dependencies from external sources rather than creating them itself."
+  },
+  {
+    "Id": 11,
+    "Term": "Controller",
+    "Definition": "A class in ASP.NET that handles HTTP requests and returns responses."
+  },
+  {
+    "Id": 12,
+    "Term": "Model",
+    "Definition": "A class that represents the data structure or entity in an application."
+  },
+  {
+    "Id": 13,
+    "Term": "ViewModel",
+    "Definition": "A model specifically designed to hold the data for the view."
+  },
+  {
+    "Id": 14,
+    "Term": "ActionResult",
+    "Definition": "A return type in ASP.NET MVC that encapsulates the result of an action method."
+  },
+  {
+    "Id": 15,
+    "Term": "IActionResult",
+    "Definition": "An interface that defines a contract for the result of an action method."
+  },
+  {
+    "Id": 16,
+    "Term": "LINQ",
+    "Definition": "Language Integrated Query, a .NET component that adds native data querying capabilities."
+  },
+  {
+    "Id": 17,
+    "Term": "ASP.NET Core",
+    "Definition": "A cross-platform, high-performance framework for building modern cloud-based web applications."
+  },
+  {
+    "Id": 18,
+    "Term": "Razor",
+    "Definition": "A markup syntax for embedding server-based code into webpages."
+  },
+  {
+    "Id": 19,
+    "Term": "SignalR",
+    "Definition": "A library for ASP.NET developers to add real-time web functionality to applications."
+  },
+  {
+    "Id": 20,
+    "Term": "Swagger",
+    "Definition": "An open-source framework for describing, producing, and consuming RESTful web services using OpenAPI."
+  },
+  {
+    "Id": 21,
+    "Term": "OOP",
+    "Definition": "Object-Oriented Programming (OOP) is a programming paradigm based on the concept of objects."
+  }
+]
