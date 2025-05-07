@@ -30,6 +30,15 @@ GlossaryManagementSystem/
 └── README.md             # Project documentation
 ```
 
+## 🌐 Live Demo
+
+Try out the API interactively using Swagger UI:
+
+🔗 [Swagger UI - Live Demo](https://glossarymanagementsystem20250505194451.azurewebsites.net/swagger/index.html)  
+🎯 Hosted on: **Microsoft Azure**
+
+> ✅ This API is deployed and publicly accessible for testing purposes.
+
 ## 🛠️ Setup & Installation
 
 ### Prerequisites
